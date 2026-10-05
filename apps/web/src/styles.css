@@ -1,0 +1,138 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --border: #272b36;
+  --text: #e6e8ee;
+  --muted: #8b91a1;
+  --accent: #6c8cff;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 6px 0 28px;
+  color: var(--muted);
+}
+
+.create {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+button {
+  padding: 12px 18px;
+  background: var(--accent);
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.ghost {
+  margin-top: 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.error {
+  color: #ff7a7a;
+  margin: 8px 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.dest {
+  max-width: 340px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px;
+}
